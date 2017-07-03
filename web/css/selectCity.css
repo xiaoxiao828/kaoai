@@ -357,6 +357,10 @@ a {
 		margin: 1em auto
 	}
 
+	.ui-header {
+		margin: 17em auto 7em auto
+	}
+
 	.ui-selectCity {
 		margin-top: .5em
 	}

@@ -3768,7 +3768,7 @@ function(t) {
 						dataType: "json",
 						contentType: "application/json",
 						success: function(t) {
-							/*if ("00000" == t.meta.code && t.data && t.data.length > 0) {
+							if ("00000" == t.meta.code && t.data && t.data.length > 0) {
 								var e = t.data,
 									i = '<ul class="ui-hotCity">',
 									s = '<ul class="ui-hotCity">',
@@ -3776,7 +3776,7 @@ function(t) {
 								e.length < o && (o = e.length);
 								for (var a = 0; a < o; a++) 440300 == e[a].cityId && (b.mappingUrl = e[a].mappingUrl, b.isOpen = 0), a < 3 ? i += n(e[a]) : s += n(e[a]);
 								i += "</ul>" + s + "</ul>"//, $("#fn-hotCities").append(i)
-							}*/
+							}
 						},
 						error: function() {
 							m("网络连接失败，获取热门城市失败，请刷新重试！")
@@ -3788,6 +3788,7 @@ function(t) {
 						//定义获取经纬度
 						var t = new BMap.Geolocation;
 						t.getCurrentPosition(function(t) {
+							debugger;
 							0 == this.getStatus() ? a(t.point.lng, t.point.lat) : r()
 						}, {
 							enableHighAccuracy: !0

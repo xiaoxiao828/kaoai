@@ -3811,11 +3811,11 @@ var mui = function(t, e) {
                         //热门城市获取
                         g(), $.ajax({
                             type: "GET",
-                            url: i.URL + "/city/autoPositionCity",
+                            url: "../json/autoPositionCity.json",
                             dataType: "json",
                             contentType: "application/json",
                             success: function(t) {
-                                v(), null != t && null != t.data ? p(t) : p()
+                                v(), null != t && null != t.data ? p(t.data) : p()
                             },
                             error: function() {
                                 v(), p()
@@ -3823,7 +3823,6 @@ var mui = function(t, e) {
                         })
                     }
                     function l(t) {
-                        debugger;
                         //获取城市相关配置信息
                         g();
                         var e = {
@@ -3837,7 +3836,6 @@ var mui = function(t, e) {
                             contentType: "application/json",
                             //data: e,
                             success: function(t) {
-                                debugger;
                                 v();
                                 if(null != t && null != t.data) {
                                     for (var o in t.data){
@@ -3880,7 +3878,7 @@ var mui = function(t, e) {
                         };
                         $.ajax({
                             type: "POST",
-                            url: i.URL + "/cityclosingconfig/queryCityClosingConfigDesc",
+                            url: "../json/queryCityClosingConfigDesc.json",
                             data: JSON.stringify(n),
                             dataType: "json",
                             contentType: "application/json",
@@ -3976,7 +3974,6 @@ var mui = function(t, e) {
                         }, !1)
                     }
                     function p(t) {
-                        debugger;
                         //设置筛选框
                         var e = $(".ui-locationCity"),
                             i = $("#fn-provinceCmp"),
@@ -4050,7 +4047,8 @@ var mui = function(t, e) {
                     });
                     var L = "citiesCache_201706091728",
                         E = "citiesCacheTime_201706091728";
-                    s(), o()
+                    //s(),
+                    o()
                 })
             }(mui, document)
     }, {}]

@@ -215,10 +215,9 @@ a {
 }
 
 .ui-header {
-    text-align: center;
-    margin: 40% auto 2em auto
+	text-align: center;
+	margin: 40% auto 2em auto
 }
-
 
 .ui-tip {
 	font-size: 1em;

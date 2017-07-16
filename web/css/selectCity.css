@@ -216,7 +216,7 @@ a {
 
 .ui-header {
 	text-align: center;
-	margin: 15em auto 5em auto
+	margin: 40% auto 2em auto
 }
 
 .ui-tip {
@@ -356,11 +356,6 @@ a {
 	.ui-bar {
 		margin: 1em auto
 	}
-
-	.ui-header {
-		margin: 17em auto 7em auto
-	}
-
 	.ui-selectCity {
 		margin-top: .5em
 	}

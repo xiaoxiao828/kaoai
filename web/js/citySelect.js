@@ -3792,6 +3792,7 @@ function(t) {
 							enableHighAccuracy: !0
 						})
 					} catch (t) {
+						alert("111");
 						r()
 					}
 				}
@@ -3810,12 +3811,12 @@ function(t) {
 					//热门城市获取
 					g(), $.ajax({
 						type: "GET",
-                        url: "../json/autoPositionCity.json",
-						//url: i.URL + "/city/autoPositionCity",
+                        //url: "../json/autoPositionCity.json",
+						url: i.URL + "/city/autoPositionCity",
 						dataType: "json",
 						contentType: "application/json",
 						success: function(t) {
-							v(), null != t && null != t.data ? p(t.data) : p()
+							v(), null != t && null != t.data ? p(t) : p()
 						},
 						error: function() {
 							v(), p()

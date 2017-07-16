@@ -3764,7 +3764,7 @@ var mui = function(t, e) {
                         $.ajax({
                             type: "GET",
                             //url: i.URL + "/city/queryHotCityByouzan",
-                            url: "json/awesome.json",
+                            url: "../json/awesome.json",
                             dataType: "json",
                             contentType: "application/json",
                             success: function(t) {
@@ -3832,7 +3832,7 @@ var mui = function(t, e) {
                         $.ajax({
                             type: "GET",
                             //url: i.URL + "/city/queryCityLocationByLocation",
-                            url: "json/detail.json",
+                            url: "../json/detail.json",
                             dataType: "json",
                             contentType: "application/json",
                             //data: e,
@@ -3860,7 +3860,7 @@ var mui = function(t, e) {
                         return g(), (T = w()) ? (v(), void d()) : void $.ajax({
                             type: "GET",
                             //url: i.URL + "/city/queryOpenCities",
-                            url:"json/openCity.json",
+                            url:"../json/openCity.json",
                             dataType: "json",
                             contentType: "application/json",
                             success: function(t) {

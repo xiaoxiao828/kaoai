@@ -3763,6 +3763,7 @@ function(t) {
 					//热门城市获取
 					$.ajax({
 						type: "GET",
+						//url: i.URL + "/city/queryHotCityByouzan",
 						url: "json/awesome.json",
 						dataType: "json",
 						contentType: "application/json",
@@ -3784,7 +3785,6 @@ function(t) {
 				}
 				function o() {
 					try {
-						//定义获取经纬度
 						var t = new BMap.Geolocation;
 						t.getCurrentPosition(function(t) {
 							0 == this.getStatus() ? a(t.point.lng, t.point.lat) : r()
@@ -3792,7 +3792,6 @@ function(t) {
 							enableHighAccuracy: !0
 						})
 					} catch (t) {
-						alert("111");
 						r()
 					}
 				}
@@ -3811,12 +3810,12 @@ function(t) {
 					//热门城市获取
 					g(), $.ajax({
 						type: "GET",
-                        //url: "../json/autoPositionCity.json",
-						url: i.URL + "/city/autoPositionCity",
+						//url: i.URL + "/city/autoPositionCity",
+                        url: "json/autoPositionCity.json",
 						dataType: "json",
 						contentType: "application/json",
 						success: function(t) {
-							v(), null != t && null != t.data ? p(t) : p()
+							v(), null != t && null != t.data ? p(t.data) : p()
 						},
 						error: function() {
 							v(), p()
@@ -3832,7 +3831,6 @@ function(t) {
 					};
 					$.ajax({
 						type: "GET",
-						//url: i.URL + "/city/queryCityLocationByLocation",
 						url: "json/detail.json",
 						dataType: "json",
 						contentType: "application/json",
@@ -3860,7 +3858,6 @@ function(t) {
 					//
 					return g(), (T = w()) ? (v(), void d()) : void $.ajax({
 						type: "GET",
-						//url: i.URL + "/city/queryOpenCities",
 						url:"json/openCity.json",
 						dataType: "json",
 						contentType: "application/json",
@@ -3881,7 +3878,7 @@ function(t) {
 					};
 					$.ajax({
 						type: "POST",
-						url: i.URL + "/cityclosingconfig/queryCityClosingConfigDesc",
+                        url: "json/queryCityClosingConfigDesc.json",
 						data: JSON.stringify(n),
 						dataType: "json",
 						contentType: "application/json",
@@ -3977,7 +3974,6 @@ function(t) {
 					}, !1)
 				}
 				function p(t) {
-					debugger;
 					//设置筛选框
 					var e = $(".ui-locationCity"),
 						i = $("#fn-provinceCmp"),

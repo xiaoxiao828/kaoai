@@ -230,7 +230,8 @@ a {
 	line-height: 1.3em;
 	width: 50%;
 	margin: 0 auto;
-	overflow: hidden
+	overflow: hidden;
+	color: #e9c060
 }
 
 .ui-selectCity {
